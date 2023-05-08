@@ -1,8 +1,9 @@
 
-
+// Package kongshared provides shared functions for kong services
 package kongshared
 
-var MSGMAP = map[string]string {
+// Messages map
+var msgMap = map[string]string {
 	"MSG0100": "User does not exists",
 	"MSG0101": "User already exists",
 	"MSG0200": "Invalid account id",
@@ -10,3 +11,7 @@ var MSGMAP = map[string]string {
 }
 
 
+// GetMsg returns the message for the given code
+func GetMsg(code string) string {
+	return msgMap[code]
+}
