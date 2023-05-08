@@ -3,7 +3,7 @@
 package kongshared
 
 // Messages map
-var msgMap = map[string]string {
+var sysMsgMap = map[string]string {
 	"MSG0100": "User does not exists",
 	"MSG0101": "User already exists",
 	"MSG0200": "Invalid account id",
@@ -11,7 +11,7 @@ var msgMap = map[string]string {
 }
 
 
-// GetMsg returns the message for the given code
-func GetMsg(code string) string {
-	return msgMap[code]
+// GetMsg returns the system message for the given code
+func GetSysMsg(code string) string {
+	return sysMsgMap[code]
 }
